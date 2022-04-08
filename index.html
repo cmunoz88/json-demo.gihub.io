@@ -1,0 +1,71 @@
+---
+layout: home
+---
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-6 nopadding">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Visual editor</h3>
+                    <div class="button-type" id="root-node-create">
+                        <button data-root="true" class="btn btn-primary create btn-icon" title="Create a new element">
+                            <span class="fa fa-plus"></span>
+                        </button>
+                    </div>
+                </div>
+                <div id="tree" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <div id="root-node" class="node branch root">
+                        <span class="head">
+                            <span id="root-node-title" class="title"></span>
+                            <!-- <span id="root-node-create" class="create fa fa-plus"></span> -->
+                        </span>
+                        <ul id="root-ul"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 nopadding">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Code editor</h3>
+                    <div class="button-type">
+                        <button id="json-editor-copy" title="Copy text to clipboard" class="btn btn-primary btn-icon" title="Copy to clipboard">Copy</button>
+                    </div>
+                </div>
+                <div id="json"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9732535637352249"
+            data-ad-slot="4554216397" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            if (location.protocol === 'https:' || location.protocol === 'http:') {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            } 
+        </script>
+    </div> -->
+</div>
+<div id="json-patch-container" class="container-fluid" style="display: none;">
+    <div class="row">
+        <div class="col-xs-12 nopadding">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Output</h3>
+                    <div class="button-type">
+                        <button class="btn btn-primary btn-icon" id="json-patch-copy" title="Copy to clipboard">Copy</button>
+                        <button class="btn btn-danger btn-icon" id="json-patch-close" title="Close">Close</button>
+                        <button class="btn btn-info btn-icon" id="json-patch-save-disk" title="Download the json file you your local machine">Save locally</button>
+                        <button class="btn btn-info btn-icon" id="json-patch-save-online" title="Save the json file online">Save online</button>
+                    </div>
+                </div>
+                <pre style="margin-top: 0; height: calc(100vh - 42px);"><code id="json-patch-output">[]</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="msg-delta">
+
+</div>
